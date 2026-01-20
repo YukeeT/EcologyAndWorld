@@ -1,0 +1,260 @@
+.reserve-detail-page {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.loading {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.error-container h2 {
+  color: #2d8659;
+  margin-bottom: 20px;
+}
+
+.reserve-detail-hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.reserve-hero-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.reserve-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(45, 134, 89, 0.85) 0%,
+    rgba(35, 107, 74, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+.reserve-hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 60px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-button {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  transition: opacity 0.3s ease;
+}
+
+.back-button:hover {
+  opacity: 0.8;
+}
+
+.reserve-hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.reserve-hero-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.95;
+}
+
+.reserve-detail-content {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.reserve-main-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.reserve-description-section h2 {
+  font-size: 2rem;
+  color: #2d8659;
+  margin-bottom: 20px;
+}
+
+.reserve-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.reserve-gallery {
+  margin-bottom: 30px;
+}
+
+.reserve-gallery h3 {
+  font-size: 1.5rem;
+  color: #2d8659;
+  margin-bottom: 15px;
+}
+
+.reserve-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.reserve-gallery-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.reserve-gallery-image {
+  width: 100%;
+  height: 160px;
+  background-color: #ddd;
+}
+
+.reserve-features h3 {
+  font-size: 1.5rem;
+  color: #2d8659;
+  margin-bottom: 15px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  padding: 12px 0;
+  padding-left: 30px;
+  position: relative;
+  font-size: 1.05rem;
+  color: #555;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.features-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #2d8659;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.reserve-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.info-card-content h4 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.info-card-value {
+  font-size: 1.3rem;
+  color: #2d8659;
+  font-weight: 600;
+  margin: 0;
+}
+
+.reserve-map-section {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.reserve-map-section h2 {
+  font-size: 2rem;
+  color: #2d8659;
+  margin-bottom: 25px;
+}
+
+.reserve-map-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.reserve-additional-info {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.reserve-additional-info h2 {
+  font-size: 2rem;
+  color: #2d8659;
+  margin-bottom: 25px;
+}
+
+.additional-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 968px) {
+  .reserve-main-info {
+    grid-template-columns: 1fr;
+  }
+
+  .reserve-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .reserve-map-section,
+  .reserve-additional-info {
+    padding: 25px 20px;
+  }
+}
+

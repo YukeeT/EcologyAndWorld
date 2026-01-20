@@ -1,0 +1,103 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Плавная прокрутка */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Общие стили для секций */
+section {
+  padding: 80px 0;
+  position: relative;
+}
+
+/* Мягкий визуальный переход между секциями */
+section + section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  box-shadow: 0 -20px 30px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2d8659;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #2d8659;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #236b4a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(45, 134, 89, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #2d8659;
+  border: 2px solid #2d8659;
+}
+
+.btn-secondary:hover {
+  background-color: #2d8659;
+  color: white;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+}
+

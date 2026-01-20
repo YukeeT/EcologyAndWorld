@@ -1,0 +1,225 @@
+.ecology-page {
+  min-height: 100vh;
+  padding-top: 80px;
+  background-color: #f8f9fa;
+}
+
+.ecology-hero {
+  background: linear-gradient(135deg, #2d8659 0%, #236b4a 100%);
+  color: white;
+  padding: 60px 0 40px;
+}
+
+.ecology-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.back-button {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  transition: opacity 0.3s ease;
+}
+
+.back-button:hover {
+  opacity: 0.8;
+}
+
+.ecology-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.ecology-hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+.ecology-content-wrapper {
+  padding: 60px 0;
+}
+
+.ecology-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ecology-sidebar {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.ecology-sidebar h3 {
+  font-size: 1.5rem;
+  color: #2d8659;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topics-list li {
+  margin-bottom: 10px;
+}
+
+.topic-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+}
+
+.topic-button:hover {
+  background-color: #e9ecef;
+  border-color: #2d8659;
+  transform: translateX(5px);
+}
+
+.topic-button.active {
+  background-color: #2d8659;
+  color: white;
+  border-color: #2d8659;
+}
+
+.topic-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.topic-title {
+  font-weight: 500;
+}
+
+.ecology-main-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  min-height: 600px;
+}
+
+.topic-article {
+  animation: fadeIn 0.3s ease;
+}
+
+.topic-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #2d8659;
+}
+
+.topic-header-icon {
+  font-size: 3rem;
+}
+
+.topic-header h2 {
+  font-size: 2.2rem;
+  color: #2d8659;
+  margin: 0;
+}
+
+.topic-body {
+  line-height: 1.8;
+}
+
+.topic-paragraph {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.topic-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 968px) {
+  .ecology-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ecology-sidebar {
+    position: static;
+    margin-bottom: 30px;
+  }
+
+  .topics-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+
+  .topic-button {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .topic-button:hover {
+    transform: translateY(-3px);
+  }
+
+  .ecology-main-content {
+    padding: 25px 20px;
+  }
+
+  .topic-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .topic-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ecology-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .topics-list {
+    grid-template-columns: 1fr;
+  }
+}
+
