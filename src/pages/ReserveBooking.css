@@ -1,0 +1,207 @@
+.reserve-booking-page {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.reserve-booking-hero {
+  position: relative;
+}
+
+.reserve-booking-hero-image {
+  position: relative;
+  width: 100%;
+  height: 260px;
+}
+
+.reserve-booking-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.reserve-booking-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 40px;
+  color: #fff;
+  max-width: 700px;
+}
+
+.reserve-booking-hero-content h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.reserve-booking-subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.reserve-booking-content {
+  padding: 40px 0 60px;
+}
+
+.reserve-booking-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+}
+
+.booking-cabins h2,
+.booking-form-wrapper h2 {
+  margin-bottom: 16px;
+}
+
+.cabins-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cabin-card {
+  border-radius: 12px;
+  border: 1px solid #dde4ee;
+  padding: 16px 18px;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.cabin-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.cabin-description {
+  margin: 0 0 10px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.cabin-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.cabin-card.selected {
+  border-color: #16a34a;
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.15);
+  transform: translateY(-1px);
+}
+
+.booking-form-wrapper {
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 20px 22px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.booking-note {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.booking-alert {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.booking-alert.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.booking-alert.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.form-group input {
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #16a34a;
+  box-shadow: 0 0 0 1px rgba(22, 163, 74, 0.1);
+}
+
+.booking-submit {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.65);
+  color: #e5e7eb;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+@media (max-width: 960px) {
+  .reserve-booking-hero-image {
+    height: 220px;
+  }
+
+  .reserve-booking-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .reserve-booking-hero-content h1 {
+    font-size: 26px;
+  }
+
+  .reserve-booking-subtitle {
+    font-size: 16px;
+  }
+
+  .booking-form-wrapper {
+    padding: 16px;
+  }
+}
+

@@ -164,6 +164,52 @@
   font-size: 1.2rem;
 }
 
+.reserve-animals {
+  margin-top: 30px;
+}
+
+.reserve-animals h3 {
+  font-size: 1.5rem;
+  color: #2d8659;
+  margin-bottom: 15px;
+}
+
+.animals-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.animal-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.animal-item h4 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.animal-species {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.animal-description {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
 .reserve-info-cards {
   display: flex;
   flex-direction: column;

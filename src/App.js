@@ -8,6 +8,7 @@ import ReservesMap from './components/ReservesMap';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ReserveDetail from './pages/ReserveDetail';
+import ReserveBooking from './pages/ReserveBooking';
 import Ecology from './pages/Ecology';
 import './App.css';
 
@@ -26,6 +27,7 @@ function App() {
             </>
           } />
           <Route path="/reserve/:id" element={<ReserveDetail />} />
+          <Route path="/reserve/:id/booking" element={<ReserveBooking />} />
           <Route path="/ecology" element={<Ecology />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

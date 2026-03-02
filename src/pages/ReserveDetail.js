@@ -19,9 +19,12 @@ const ReserveDetail = () => {
   const navigate = useNavigate();
   const [reserve, setReserve] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [animals, setAnimals] = useState([]);
+  const [animalsLoading, setAnimalsLoading] = useState(true);
 
   useEffect(() => {
     fetchReserve();
+    fetchAnimals();
   }, [id]);
 
   const fetchReserve = async () => {
@@ -32,6 +35,17 @@ const ReserveDetail = () => {
     } catch (error) {
       console.error('Ошибка загрузки данных:', error);
       setLoading(false);
+    }
+  };
+
+  const fetchAnimals = async () => {
+    try {
+      const response = await axios.get(`http://localhost:5000/api/reserves/${id}/animals`);
+      setAnimals(response.data);
+      setAnimalsLoading(false);
+    } catch (error) {
+      console.error('Ошибка загрузки списка животных:', error);
+      setAnimalsLoading(false);
     }
   };
 
@@ -113,6 +127,27 @@ const ReserveDetail = () => {
                   ))}
                 </ul>
               </div>
+
+              <div className="reserve-animals">
+                <h3>Животный мир заповедника</h3>
+                {animalsLoading ? (
+                  <p>Загрузка информации о животных...</p>
+                ) : animals.length === 0 ? (
+                  <p>Информация о животных для этого заповедника пока отсутствует.</p>
+                ) : (
+                  <ul className="animals-list">
+                    {animals.map((animal) => (
+                      <li key={animal.id} className="animal-item">
+                        <h4>{animal.name}</h4>
+                        <p className="animal-species">{animal.species}</p>
+                        {animal.description && (
+                          <p className="animal-description">{animal.description}</p>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
 
             <div className="reserve-info-cards">
@@ -137,6 +172,15 @@ const ReserveDetail = () => {
                   <p className="info-card-value">
                     {reserve.location.lat.toFixed(4)}, {reserve.location.lng.toFixed(4)}
                   </p>
+                </div>
+              </div>
+              <div className="info-card">
+                <div className="info-card-icon">🏡</div>
+                <div className="info-card-content">
+                  <h4>Бронирование домиков</h4>
+                  <Link to={`/reserve/${id}/booking`} className="booking-link">
+                    Перейти к онлайн-бронированию
+                  </Link>
                 </div>
               </div>
             </div>
